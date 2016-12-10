@@ -12,7 +12,22 @@
             'LocalStorageModule',
             'angular-loading-bar'
         ]
-    );
+    )
+        .controller('PdAppController', PdAppController);
+
+    function PdAppController($state) {
+        var vm = this;
+        vm.goCadastro = goCadastro;
+        vm.goPesqusia = goPesquisa;
+
+        function goCadastro() {
+            $state.go('cadastroUsuario');
+        }
+
+        function goPesquisa() {
+            $state.go('pesquisaUsuario');
+        }
+    }
 
 })();
     

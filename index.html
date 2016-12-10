@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.css">
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
     <!--<link rel="stylesheet" href="app/css/style.css">-->
 
     <!--<link rel="stylesheet" href="arquitetura/directivas/pd-crud/pd-crud.css">-->
@@ -22,7 +28,7 @@
     <!-- fim css -->
 
     <!-- início js -->
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-aria/angular-aria.js"></script>
     <script src="node_modules/angular-messages/angular-messages.js"></script>
@@ -38,13 +44,25 @@
 
     <script src="config/pdApp-module.js"></script>
     <script src="config/pdApp-rotas.js"></script>
+
     <script src="controller/pesquisa-usuario-controller.js"></script>
+    <script src="controller/cadastro-usuario-controller.js"></script>
+
+    <script src="service/usuario-service.js"></script>
 
     <!-- fim js -->
 </head>
-<body ng-app="pdApp" class="container">
-<div class="navbar-default navbar-inverse"></div>
-<div>
+<body ng-app="pdApp" ng-controller="PdAppController as vm">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Prodata</a>
+            <a class="navbar-brand" href="#" ng-click="vm.goCadastro()">Cadastro</a>
+            <a class="navbar-brand" href="#" ng-click="vm.goPesquisa()">Pesquisa</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
     <ui-view></ui-view>
 </div>
 

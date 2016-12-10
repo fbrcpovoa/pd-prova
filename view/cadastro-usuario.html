@@ -1,0 +1,78 @@
+<div ng-controller="CadastroUsuarioController as vm">
+    <div class="row">
+        <h4>Você está em cadastro usuário</h4>
+        <form id="cadastroForm">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="cod">Código</label>
+                        <input type="text" class="form-control" id="cod" placeholder="Código" disabled
+                               ng-model="vm.usuario.cod" ng-change="vm.sequence">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" id="login" placeholder="Login"
+                               ng-model="vm.usuario.login">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome" ng-model="vm.usuario.nome">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="login">E-mail</label>
+                        <input type="text" class="form-control" id="email" placeholder="E-mail"
+                               ng-model="vm.usuario.email">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="tipo">Tipo de usuário</label>
+                        <select type="text" class="form-control" id="tipo" placeholder="Tipo de usuário"
+                                ng-model="vm.usuario.tipo">
+                            <option value="" id=""></option>
+                            <option value="Normal" id="Normal">Normal</option>
+                            <option value="Supervisor" id="Supervisor">Supervisor</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="E-mail"
+                               ng-model="vm.usuario.senha">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="confirmaSenha">Confirmação de senha</label>
+                        <input type="password" class="form-control" id="confirmaSenha" placeholder="E-mail"
+                               ng-model="vm.usuario.cofirmaSenha">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Data de lançamento</label>
+                        <md-datepicker ng-model="vm.usuario.dataValidadeSenha"
+                                       name="dataLancamento"
+                                       required>
+                        </md-datepicker>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="vm.salvar()">Salvar</button>
+            {{vm.usuario}}
+        </form>
+    </div>
+
+</div>

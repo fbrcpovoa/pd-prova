@@ -1,5 +1,10 @@
 <div ng-controller="PesquisaUsuarioController as vm">
-
-    <div ui-grid="vm.gridOptions"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Você está em pesquisa de usuário</h4>
+            <button class="btn btn-primary" ng-click="vm.cadastro()">Novo usuário</button>
+            <div ui-grid="vm.gridOptions"></div>
+        </div>
+    </div>
 
 </div>

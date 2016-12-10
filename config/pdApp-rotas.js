@@ -9,11 +9,17 @@
         var pesquisaUsuario = {
             name: 'pesquisa-usuario',
             url: '/pesquisa-usuario',
-            templateUrl: 'view/pesquisa-usuario.html',
+            templateUrl: 'view/pesquisa-usuario.html'
+        };
+        var cadastroUsuario = {
+            name: 'cadastro-usuario',
+            url: '/cadastro-usuario',
+            templateUrl: 'view/cadastro-usuario.html'
         };
 
         $stateProvider
-            .state('pesquisaUsuario', pesquisaUsuario);
+            .state('pesquisaUsuario', pesquisaUsuario)
+            .state('cadastroUsuario', cadastroUsuario);
 
         $urlRouterProvider.otherwise('/pesquisa-usuario');
 
